@@ -5,10 +5,7 @@ import { Item } from './Item';
 
 export const Form =({newForm, changeNewForm})=>{
 
-    const handleDeletion = (id)=>{
-        console.log("From handleDeletion in  Forms")
-
-    }
+    
 
     const [searchField, setSearchField] = useState("");
     const [selectedOption, setSelectedOption] = useState(1);

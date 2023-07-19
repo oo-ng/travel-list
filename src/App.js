@@ -6,16 +6,16 @@ import { useState } from "react";
 
 function App() {
 
-  const [newItem, setNewItem]= useState([]) 
-
+  const [newItems, setNewItem]= useState([])
+  const [toBeDeletedID, setToBeDeletedID]  = useState(0);
 
   return (
     <div>
       <header> <Logo/> </header>
       <main> 
-        <Form newForm={newItem} changeNewForm={setNewItem}/> 
-        {console.log(newItem)}
-        <PackingList initialItems={newItem} />
+        <Form newForm={newItems} changeNewForm={setNewItem} /> 
+        {console.log(newItems)}
+        <PackingList initialItems={newItems} setInitialItems={setNewItem} idToDelete={toBeDeletedID} setIdToDelete={setToBeDeletedID} />
       </main>
 
       <Stats/>

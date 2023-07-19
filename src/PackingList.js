@@ -1,14 +1,19 @@
 import React from 'react'
 import { Item } from './Item';
 
+export const PackingList =( {initialItems, setInitialItems, idToDelete, setIdToDelete} )=>{
 
+    
 
-
-export const PackingList =( {initialItems} )=>{
 
     const ItemsToBeRendered = initialItems.map((item)=>{
+        
         return(
             <Item 
+        setInitialItemsI={setInitialItems}
+        initialItemsI={initialItems}
+        idToDeleteI ={idToDelete}
+        setIdToDeleteI={setIdToDelete}
         key = {item.id}
         id={item.id}
         description={item.description}
