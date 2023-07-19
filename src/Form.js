@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { Item } from './Item';
 
 
 export const Form =({newForm, changeNewForm})=>{
@@ -52,8 +51,7 @@ export const Form =({newForm, changeNewForm})=>{
             <h3>What do you need for your trip?</h3>
             <select value={selectedOption} onChange={handleOptionChange}>
 
-                {Array.from( {length:20}, (_,i)=>i+1).
-                map((num)=>
+                {Array.from( {length:20}, (_,i)=>i+1).map((num)=>
                 <option key={num} value={num}>
                     {num}
                 </option>)
