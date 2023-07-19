@@ -1,7 +1,6 @@
 import React from 'react'
 export const Stats =({initialItems, noOfPacked})=>{
-    console.log("Init", noOfPacked, initialItems.length );
-    console.log("Init type", typeof noOfPacked, typeof initialItems.length );
+    
     const percentageOfPacked = Math.round((noOfPacked/(initialItems.length))*100);
 
 
