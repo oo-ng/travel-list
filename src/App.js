@@ -6,8 +6,9 @@ import { useState } from "react";
 
 function App() {
 
-  const [newItems, setNewItem]= useState([])
+  const [newItems, setNewItem] = useState([])
   const [toBeDeletedID, setToBeDeletedID]  = useState(0);
+  const [noOfPacked, setNoOfPacked] = useState(0);
 
   return (
     <div>
@@ -15,10 +16,11 @@ function App() {
       <main> 
         <Form newForm={newItems} changeNewForm={setNewItem} /> 
         {console.log(newItems)}
-        <PackingList initialItems={newItems} setInitialItems={setNewItem} idToDelete={toBeDeletedID} setIdToDelete={setToBeDeletedID} />
+        <PackingList initialItems={newItems} setInitialItems={setNewItem} idToDelete={toBeDeletedID} setIdToDelete={setToBeDeletedID} setNoOfPacked={setNoOfPacked}
+        noOfPacked={noOfPacked} />
       </main>
 
-      <Stats/>
+      <Stats initialItems={newItems} noOfPacked={noOfPacked}/>
       
       
     </div>

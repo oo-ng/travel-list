@@ -1,7 +1,7 @@
 import React from 'react'
 import { Item } from './Item';
 
-export const PackingList =( {initialItems, setInitialItems, idToDelete, setIdToDelete} )=>{
+export const PackingList =( {initialItems, setInitialItems, idToDelete, setIdToDelete, setNoOfPacked, noOfPacked} )=>{
 
     
 
@@ -10,6 +10,8 @@ export const PackingList =( {initialItems, setInitialItems, idToDelete, setIdToD
         
         return(
             <Item 
+        noOfPackedI={noOfPacked}
+        setNoOfPackedI={setNoOfPacked}
         setInitialItemsI={setInitialItems}
         initialItemsI={initialItems}
         idToDeleteI ={idToDelete}
